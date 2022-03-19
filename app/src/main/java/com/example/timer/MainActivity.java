@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, Alarm.class);
             AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
             alarmManager.set(AlarmManager.RTC_WAKEUP,
-                    System.currentTimeMillis() + seconds + 1000L,
+                    System.currentTimeMillis() + seconds * 1000L,
                     PendingIntent.getBroadcast(getApplicationContext(), 0, intent, 0));
         });
     }
